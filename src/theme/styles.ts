@@ -45,7 +45,7 @@ export default {
   styles: {
     global: (props: { colorMode: string }) => ({
       body: {
-        bg: mode('gray.50', 'gray.800')(props),
+        bg: mode('#F0F0F3', 'gray.800')(props),
         fontFamily: 'Inter, sans-serif',
       },
       html: {

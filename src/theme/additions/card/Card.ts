@@ -12,16 +12,16 @@ const Card = {
     panel: (props: { colorMode: string }) => ({
       bg: props.colorMode === 'dark' ? 'gray.700' : 'white',
       width: '100%',
-      boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.05)',
-      borderRadius: '15px',
-      border: '0.5px solid',
+      boxShadow: '1.5px 1.5px 3px 0px rgba(174, 174, 192, 0.40), -1px -1px 3px 0px #FFF',
+      borderRadius: '10px',
+      border: '0.5px solid none',
     }),
     widget: (props: { colorMode: string }) => ({
       bg: props.colorMode === 'dark' ? 'gray.800' : 'gray.100',
       width: '100%',
       boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-      borderRadius: '15px',
-      border: '0.5px solid',
+      borderRadius: '5px',
+      border: '0.5px solid none',
     }),
   },
   defaultProps: {

@@ -40,7 +40,7 @@ const _LoginForm: React.FC<_LoginFormProps> = ({ setActiveForm }) => {
   const { t } = useTranslation();
   const { setToken } = useAuth();
   const { accessPolicyLink, passwordPolicyLink } = useApiRequirements();
-  const titleColor = useColorModeValue('blue.300', 'white');
+  const titleColor = useColorModeValue('#489BFF', 'white');
   const textColor = useColorModeValue('gray.400', 'white');
   const { mutateAsync: login, error } = useLogin();
   const forgotPassword = () => setActiveForm({ form: 'forgot-password' });
@@ -129,8 +129,11 @@ const _LoginForm: React.FC<_LoginFormProps> = ({ setActiveForm }) => {
                 color={textColor}
                 onClick={forgotPassword}
                 fontWeight="medium"
-                variant="ghost"
+                variant="none"
                 pl={{ base: '0px' }}
+                _hover={{
+                bg:"none"
+                }}
               >
                 {t('login.forgot_password')}
               </Button>
@@ -143,17 +146,18 @@ const _LoginForm: React.FC<_LoginFormProps> = ({ setActiveForm }) => {
             <Button
               fontSize="15px"
               type="submit"
-              bg="blue.300"
+              bg="#489BFF"
               w="100%"
               h="45"
               mb="20px"
               color="white"
               mt="20px"
+              borderRadius="5px"
               _hover={{
-                bg: 'blue.500',
+                bg: '#489BFF',
               }}
               _active={{
-                bg: 'blue.300',
+                bg:  "#489BFF",
               }}
               isLoading={isSubmitting}
               isDisabled={!isValid}

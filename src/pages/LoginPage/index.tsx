@@ -14,7 +14,7 @@ interface LoginPageProps {
 const LoginPage = ({ lightLogo, darkLogo }: LoginPageProps) => {
   const [activeForm, setActiveForm] = useState<LoginFormProps>({ form: 'login' });
   const { colorMode } = useColorMode();
-  const loginBg = useColorModeValue('gray.100', 'gray.700');
+  const loginBg = useColorModeValue('#F0F0F3', 'gray.700');
 
   const getForm = React.useCallback(() => {
     if (activeForm.form === 'login') return <LoginForm setActiveForm={setActiveForm} />;
@@ -29,16 +29,16 @@ const LoginPage = ({ lightLogo, darkLogo }: LoginPageProps) => {
     <Box px="5%" h="100vh" display="flex" alignItems="center">
       <Center display="block" w="100%">
         <Center h="100%" w="100%" mb={6} alignItems="center">
-          <Image maxH="300px" w="100%" maxW="600px" src={colorMode === 'light' ? lightLogo : darkLogo} />
+          <Image maxH="185px" w="100%" maxW="600px" src={colorMode === 'light' ? lightLogo : darkLogo} />
         </Center>
         <Center>
           <Flex
-            borderRadius="40px"
+            borderRadius="15px"
             w="100%"
             maxW="600px"
             bgColor={loginBg}
             p="48px"
-            boxShadow={colorMode === 'light' ? 'xl' : 'dark-lg'}
+            boxShadow="1.5px 1.5px 3px 0px rgba(174, 174, 192, 0.40), -1px -1px 3px 0px #FFF"
             direction="column"
           >
             {getForm()}

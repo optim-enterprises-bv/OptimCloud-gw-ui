@@ -122,18 +122,19 @@ export const Sidebar = ({ routes, isOpen, toggle, logo, version, topNav, childre
         <Box hidden={isCompact} position="fixed">
           <Box
             shadow={navbarShadow}
-            bg={useColorModeValue('white', 'gray.700')}
+            bg={useColorModeValue('#FEFEFE', 'gray.700')}
             transition={variantChange}
             w="200px"
             maxW="200px"
             h="calc(100vh - 32px)"
             my="16px"
             ml="16px"
-            borderRadius="15px"
-            border="0.5px solid"
+            borderRadius="10px"
+            border="0.5px solid none"
+            boxShadow="4px 4px 6px 0px rgba(174, 174, 192, 0.40), -1px -1px 3px 0px #FFF;"
           >
             {brand}
-            <Flex direction="column" h="calc(100vh - 160px)" alignItems="center" overflowY="auto">
+            <Flex direction="column" h="calc(100vh - 185px)" alignItems="center" overflowY="auto">
               {sidebarContent}
             </Flex>
           </Box>

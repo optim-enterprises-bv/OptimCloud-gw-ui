@@ -14,6 +14,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { ConfigurationFieldExplanation } from '../../ConfigurationFieldExplanation';
 import { FieldInputProps } from 'models/Form';
+import {Eye, EyeSlash } from 'iconsax-react';
 
 export interface StringInputProps extends FieldInputProps<string | undefined | string[]>, LayoutProps {
   isError: boolean;
@@ -77,12 +78,13 @@ const _StringInput: React.FC<StringInputProps> = ({
             value={value}
             onChange={onChange}
             onBlur={onBlur}
-            borderRadius="15px"
+            borderRadius="5px"
             fontSize="sm"
             type={hideButton && !show ? 'password' : 'text'}
             autoComplete="off"
             border="2px solid"
             _disabled={{ opacity: 0.8, cursor: 'not-allowed' }}
+            boxShadow="-1px -1px 1px 0px #F0F0F3 inset, 1px 1px 1px 0px rgba(174, 174, 192, 0.25) inset"
           />
           {hideButton && (
             <InputRightElement width="4.5rem">
@@ -91,8 +93,10 @@ const _StringInput: React.FC<StringInputProps> = ({
                 size="sm"
                 onClick={setShow.toggle}
                 _disabled={{ opacity: 0.8, cursor: 'not-allowed' }}
+                border="none"
+                bg="transparent"
               >
-                {show ? t('common.hide') : t('common.show')}
+                {show ? <EyeSlash/> : <Eye/>}
               </Button>
             </InputRightElement>
           )}

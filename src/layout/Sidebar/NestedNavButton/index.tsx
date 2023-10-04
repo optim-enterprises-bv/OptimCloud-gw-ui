@@ -24,7 +24,7 @@ type Props = {
 const NestedNavButton = ({ isActive, route }: Props) => {
   const { t } = useTranslation();
   const inactiveTextColor = useColorModeValue('gray.600', 'gray.200');
-  const hoverBg = useColorModeValue('blue.100', 'blue.800');
+  const hoverBg = useColorModeValue('#C6E0FF', 'blue.800');
 
   return (
     <AccordionItem w="152px" borderTop="0px" borderBottom="0px">
@@ -37,11 +37,11 @@ const NestedNavButton = ({ isActive, route }: Props) => {
         _hover={{
           bg: hoverBg,
         }}
-        borderRadius="15px"
+        borderRadius="0px"
         w="100%"
       >
         <Flex alignItems="center" w="100%">
-          <IconBox color="blue.300" h="30px" w="30px" me="6px" transition={variantChange} fontWeight="bold">
+          <IconBox color="#489BFF" h="30px" w="30px" me="6px" transition={variantChange} fontWeight="bold">
             {route.icon(false)}
           </IconBox>
           <Text size="md" fontWeight="bold" color={inactiveTextColor}>
@@ -51,7 +51,7 @@ const NestedNavButton = ({ isActive, route }: Props) => {
         <AccordionIcon />
       </AccordionButton>
       <AccordionPanel pl="18px" paddingEnd={0} pr="-18px">
-        <Box pl={1} pr={-1} borderLeft="1px solid #63b3ed">
+        <Box pl={1} pr={-1} borderLeft="1px solid #489BFF">
           {route.children.map((subRoute) => (
             <SubNavigationButton key={subRoute.path} route={subRoute} isActive={isActive} />
           ))}

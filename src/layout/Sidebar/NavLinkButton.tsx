@@ -42,7 +42,7 @@ export const NavLinkButton = ({ isActive, route, toggleSidebar }: Props) => {
             }}
           >
             <Flex alignItems="center" w="100%">
-              <IconBox color="blue.300" h="30px" w="30px" me="6px" transition={variantChange} fontWeight="bold">
+              <IconBox color="#489BFF" h="30px" w="30px" me="6px" transition={variantChange} fontWeight="bold">
                 {route.icon(false)}
               </IconBox>
               <Text color={activeTextColor} fontSize="md" fontWeight="bold">
@@ -66,7 +66,7 @@ export const NavLinkButton = ({ isActive, route, toggleSidebar }: Props) => {
             }}
           >
             <Flex alignItems="center" w="100%">
-              <IconBox color="blue.300" h="30px" w="30px" me="6px" transition={variantChange} fontWeight="bold">
+              <IconBox color="#489BFF" h="30px" w="30px" me="6px" transition={variantChange} fontWeight="bold">
                 {route.icon(false)}
               </IconBox>
               <Text color={inactiveTextColor} fontSize="md" fontWeight="bold">
